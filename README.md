@@ -2,7 +2,7 @@
 
 # EvolveLab: Modular Long-Term Memory Framework for LLM Agents
 
-**Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents**
+**Module Design and Effectiveness Evaluation of Long-Term Memory Systems for Large Language Models**
 
 *ECNU Undergraduate Thesis, 2026*
 
@@ -190,7 +190,7 @@ If you find this work useful, please cite:
 
 ```bibtex
 @thesis{dl2026evolvelab,
-  title   = {Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents},
+  title   = {Module Design and Effectiveness Evaluation of Long-Term Memory Systems for Large Language Models},
   author  = {Lin Du},
   school  = {East China Normal University},
   year    = {2026},
