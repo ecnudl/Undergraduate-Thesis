@@ -1,115 +1,209 @@
 <div align="center">
 
-<h2>Flash-Searcher: Fast and Effective Web Agents via DAG-Based Parallel Execution</h2>
+# EvolveLab: Modular Long-Term Memory Framework for LLM Agents
+
+**Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents**
+
+*ECNU Undergraduate Thesis, 2026*
+
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-green?logo=python&logoColor=white)](https://www.python.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)
+[![GPT-5](https://img.shields.io/badge/Model-GPT--5-74aa9c?logo=openai&logoColor=white)](https://openai.com)
 
 </div>
+
+---
+
+## Overview
+
+Existing long-term memory systems for LLM agents tightly couple memory writing, storage, retrieval, and management, making it difficult to replace components, compare alternatives, or systematically evaluate module contributions. **EvolveLab** addresses this by decomposing the memory lifecycle into four orthogonal modules and providing a unified framework for configuration search and analysis.
 
 <div align="center">
-
-  <a href='https://arxiv.org/abs/2509.25301'><img src='https://img.shields.io/badge/Flash--Searcher-arXiv-d63031?logo=arxiv&logoColor=white'></a>
-  <a href='https://www.python.org/downloads/release/python-31010/'><img src='https://img.shields.io/badge/Python-3.10-green'></a>
-  <a href='https://github.com/OPPO-PersonalAI/Flash-Searcher/blob/main/LICENSE'><img src='https://img.shields.io/badge/License-Apache%202.0-blue'></a>
-  
+  <img src="assets/benchmark_pipeline.png" width="95%" />
+  <br/>
+  <sub>Four-module memory pipeline applied to three evaluation benchmarks: GAIA, WebWalkerQA, and LongMemEval.</sub>
 </div>
 
-This is the official repository for **Flash-Searcher**, a DAG-based parallel execution agent framework that achieves SOTA results on multiple datasets.
+### Key Contributions
 
-The work is done by [Tianrui Qin](https://scholar.google.com/citations?user=_bOMXMkAAAAJ&hl=en), [Qianben Chen](https://github.com/chenqianben), [Sinuo Wang](https://scholar.google.com/citations?user=COYsHiwAAAAJ&hl=en&oi=sra), [Kang Zhu](https://scholar.google.com/citations?user=FHAn7HQAAAAJ&hl=en), [He Zhu](https://scholar.google.com/citations?user=910JuXUAAAAJ&hl=en&oi=sra), [Dingfeng Shi](https://dingfengshi.github.io/), [Ge Zhang](https://scholar.google.com/citations?user=qyTrq4kAAAAJ&hl=en&oi=ao), [Jiaheng Liu](https://liujiaheng.github.io/), [Xitong Gao](https://scholar.google.com/citations?user=-YIUCL8AAAAJ&hl=en), [Yuchen Eleanor Jiang](https://scholar.google.com/citations?user=AEiEn6MAAAAJ&hl=en&oi=ao), [Wangchunshu Zhou](https://michaelzhouwang.github.io/).
+1. **Composable 4-Module Framework** &mdash; Orthogonally decouples memory into **Encode &rarr; Store &rarr; Retrieve &rarr; Manage**, with interchangeable atomic operations per module (5 encoding presets, 5 storage backends, 7 retrieval strategies, 16 management operations).
+
+2. **Hierarchical Feedback Search** &mdash; A multi-stage search method that screens out inefficient candidates via proxy evaluation and identifies relatively better configurations through validation, reducing search cost by **74.5%** compared to brute-force enumeration.
+
+3. **Unified Evaluation & Ablation** &mdash; A systematic protocol covering overall comparison, module-level ablation, interaction-effect analysis, base-model impact, and cross-task generalization across **GAIA**, **WebWalkerQA**, and **LongMemEval**.
+
+---
+
+## Results
+
+Our Search-Best configuration achieves **90.6%** on GAIA and **84.0%** on WebWalkerQA, outperforming all baselines including Voyager, Mem0, Zep, G-memory, AWM, MemoryBank, and Agent-KB.
 
 <div align="center">
-    <img src="./assets/flash-searcher.png" width="90%" height="auto" />
+  <img src="assets/overall_comparison.png" width="90%" />
+  <br/>
+  <sub>Overall comparison on GAIA (Level-1, 53 tasks) and WebWalkerQA (50 tasks). Search-Best surpasses the No-Memory baseline by +11.4pp and +12.0pp respectively.</sub>
 </div>
 
-## News 🔥
-- [10/2025]  We have released the official code implement of Flash-Searcher！🎉
+<br/>
 
-## Overview 🎆
+| Method | GAIA | WebWalkerQA | Tokens | Latency |
+|:-------|:----:|:-----------:|:------:|:-------:|
+| No-Memory | 60.2% | 62.0% | 481K | 210s |
+| AWM | 81.1% | 74.0% | 488K | 218s |
+| Agent-KB | 81.1% | 61.5% | 512K | 234s |
+| **Default-Anchor** | 84.9% | 78.0% | 571K | 259s |
+| **Search-Best** | **90.6%** | **84.0%** | 442K | 226s |
 
-Flash-Searcher transforms complex task solving through a **DAG-based parallel execution framework** that dramatically improves efficiency while maintaining high performance.
+> Search-Best = `workflow_shortcut / hybrid / semantic / json_full`
 
-### Key Innovations
+---
 
-- **DAG-based task decomposition** that maps complex tasks into structured subtasks with explicit dependencies.
-- **Adaptive parallel scheduling** that allows aggressive execution of subtasks when partially ready.
-- **Dynamic plan optimization** that periodically refines the execution graph based on progress.
+## Architecture
 
-### Performance Highlights
-
-- **35% fewer execution steps** (11.2 → 7.4) compared to traditional sequential approaches.
-- **Superior results** on challenging benchmarks: BrowseComp (**67.7**), xbench (**83.0**), GAIA (**82.5**), HLE (**44.0**).
-
-<div align="center">
-    <img src="./assets/framework.png" width="80%" height="auto" />
-</div>
-
-- **Effective transfer** to open-source models through lightweight adaptation.
-
-<div align="center">
-    <img src="./assets/model.png" width="80%" height="auto" />
-</div>
-
-By breaking free from the sequential bottleneck that limits conventional agent systems, Flash-Searcher creates a new efficiency-performance frontier for complex task solving.
-
-## Quick Start ⚙
-#### 1. Env Setup
-```bash
-conda create -n flash_searcher python=3.10
-conda activate flash_searcher
-pip install requirements.txt
+```
+EvolveLab/
+├── memory_schema.py          # MemoryUnit: unified atomic memory representation
+├── storage/                  # Storage backends
+│   ├── json_storage.py       #   JSON-based flat storage
+│   ├── vector_storage.py     #   Dense vector index (FAISS)
+│   ├── hybrid_storage.py     #   JSON + vector dual index
+│   ├── graph_storage.py      #   Three-layer directed graph (NetworkX)
+│   └── llm_graph_storage.py  #   Graph + LLM entity/fact extraction
+├── retrieval/                # Retrieval strategies
+│   ├── semantic_retriever.py #   Dense embedding similarity
+│   ├── keyword_retriever.py  #   BM25 / TF-IDF keyword matching
+│   ├── hybrid_retriever.py   #   Semantic + keyword fusion
+│   ├── contrastive_retriever.py  # Query-aware contrastive ranking
+│   └── graph_retriever.py    #   Graph traversal + embedding
+├── management/               # Memory lifecycle operations
+│   ├── ops/                  #   16 pluggable operations
+│   ├── pipeline.py           #   Orchestrator (post-task / periodic / on-insert)
+│   └── presets.py            #   4 preset pipelines
+└── providers/                # Memory provider implementations
+    ├── modular_memory_provider.py  # Core: wires storage + retrieval + management
+    ├── voyager_memory_provider.py  # Baseline: Voyager-style
+    ├── agent_kb_provider.py        # Baseline: Agent-KB
+    └── ...                         # 12+ provider implementations
 ```
 
-#### 2. Set up environment variables
+---
 
-Flash-Searcher framework and model use `SearchTool` and `CrawlTool` for web search and crawl pages, which require environment variables with the corresponding API key, based on the selected provider:
-- `SERPER_API_KEY` for SerpApi: [Serper]
-(https://serper.dev/)
-- `JINA_API_KEY` for JinaApi: [JinaAI]
-(https://jina.ai/)
+## Quick Start
 
-Depending on the model you want to use, you may need to set environment variables. You need to set the `DEFAULT_MODEL`, `OPENAI_BASE_URL` and `OPENAI_API_KEY` environment variable.
+### 1. Environment Setup
 
-#### 3. Run Flash-Searcher Agent
-Run the Flash-Searcher agent on text-only tasks:
 ```bash
-python run_flash_searcher.py --infile <dataset or benchmark path> --outfile <output path> --summary_interval <plan optimize & process managment interval> --concurrency <num workers>
+conda create -n memevolve python=3.10 -y
+conda activate memevolve
+pip install -r requirements.txt
 ```
-Note that the input data must contain two mandatory fields: "question", and "answer".
 
-Run the Flash-Searcher agent on multimodal tasks::
+### 2. Configuration
+
 ```bash
-python run_flash_searcher_mm.py --infile <dataset or benchmark path> --outfile <output path> --summary_interval <plan optimize & process managment interval> --concurrency <num workers>
+cp .env.example .env
+# Fill in your API keys:
+#   OPENAI_API_KEY    — LLM inference
+#   SERPER_API_KEY    — Web search
+#   HF_TOKEN          — Dataset download
 ```
-Note that the input data must contain three mandatory fields: "question", "answer", and "file_name" (path to the associated multimodal file(s) such as images, audio, or documents relevant to the question).
 
-#### 4. Run Flash-Searcher Model (Optimal)
+### 3. Download Datasets
 
-Evaluation for Flash-Searcher Model is located in the `./model_eval` directory. Before running evaluations, configure the summary model for the crawl tool via the `SUMMARY_MODEL` environment variable, specifying the model identifier (e.g., `gpt-5-mini`):
 ```bash
-python ./model_eval/model_infer.py --infile <dataset or benchmark path> --outfile <output path> --concurrency <num workers> --model_name <You vllm model name>  --vllm_url <You vllm model server> --vllm_api_key <You vllm server api_key> 
+python scripts/data/download_gaia.py
+python scripts/data/download_webwalkerqa.py
+python scripts/data/download_longmemeval.py
 ```
-The models evaluated in this process undergo supervised fine-tuning using the [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework. Our training procedure utilizes high-quality trajectory data, which is fully open-sourced to ensure research reproducibility.
 
-> Note: The open-source version of Flash-Searcher uses sequential execution for tool calls. To implement parallel tool invocation, refer to the parallel comments in `FlashOAgents/agent.py`. Ensure sufficient tool resources are available to support (task concurrency * tool concurrency (deafult: 5)).
+### 4. Run Evaluation
 
-## Acknowledgement 📑
-Part of the code is developed with reference to the [smolagents](https://github.com/huggingface/smolagents) framework. Building on its design principles, we developed the Flash-Searcher framework, which introduces DAG-based scheduling for efficient task dependency management and parallel tool invocation to accelerate multi-tool execution. This design enhances both computational efficiency and the flexibility of agentic workflows in complex, multimodal scenarios.
+```bash
+# Single configuration evaluation on GAIA
+python scripts/eval/run_flash_searcher_mm_gaia.py \
+  --infile data/gaia/validation/metadata.jsonl \
+  --memory_provider modular \
+  --enable_memory_evolution \
+  --shared_memory_provider \
+  --model gpt-5
 
-## Citation 📕
+# Architecture search (hierarchical feedback search)
+bash scripts/search/run_adaptive_search.sh
+```
 
-If you find `Flash-Searhcer` useful in your research or applications, we would appreciate it if you could cite our work:
+### 5. Run Tests
+
+```bash
+python -m pytest tests/ -v
+```
+
+---
+
+## Module Configuration
+
+Each module supports multiple interchangeable operations:
+
+| Module | Options | Env Variable |
+|:-------|:--------|:-------------|
+| **Encode** | `insight_tip`, `trajectory_only`, `workflow_shortcut`, `mixed_all` | `MODULAR_ENABLED_PROMPTS` |
+| **Store** | `json`, `vector`, `hybrid`, `graph`, `llm_graph` | `MODULAR_STORAGE_TYPE` |
+| **Retrieve** | `semantic`, `keyword`, `hybrid`, `contrastive`, `graph` | `MODULAR_RETRIEVAL_TYPE` |
+| **Manage** | `none`, `lightweight`, `json_basic`, `json_full`, `graph_full` | `MODULAR_MANAGEMENT_PRESET` |
+
+Example: run a specific configuration via environment variables:
+
+```bash
+MODULAR_ENABLED_PROMPTS="workflow,shortcut" \
+MODULAR_STORAGE_TYPE="hybrid" \
+MODULAR_RETRIEVAL_TYPE="semantic" \
+MODULAR_MANAGEMENT_PRESET="json_full" \
+python scripts/eval/run_flash_searcher_mm_gaia.py --memory_provider modular ...
+```
+
+---
+
+## Repository Structure
+
+```
+.
+├── EvolveLab/              # Core: 4-module memory framework
+├── FlashOAgents/           # Agent runtime (DAG parallel execution)
+├── experiments/
+│   ├── configs/            # Experiment configurations (search, ablation)
+│   ├── scripts/            # Search & evaluation orchestrators
+│   └── common/             # Shared utilities
+├── prompts/                # 6 memory extraction prompt templates
+├── scripts/
+│   ├── eval/               # Evaluation entry points
+│   ├── search/             # Architecture search launchers
+│   └── data/               # Dataset downloaders
+├── tests/                  # Unit tests (104 cases)
+├── .env.example            # Configuration template
+└── requirements.txt        # Dependencies
+```
+
+---
+
+## Citation
+
+If you find this work useful, please cite:
 
 ```bibtex
-@article{qin2025flash,
-  title={Flash-Searcher: Fast and Effective Web Agents via DAG-Based Parallel Execution},
-  author={Qin, Tianrui and Chen, Qianben and Wang, Sinuo and Xing, He and Zhu, King and Zhu, He and Shi, Dingfeng and Liu, Xinxin and Zhang, Ge and Liu, Jiaheng and others},
-  journal={arXiv preprint arXiv:2509.25301},
-  year={2025}
+@thesis{gzl2026memevolve,
+  title   = {Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents},
+  author  = {Zhilong Guo},
+  school  = {East China Normal University},
+  year    = {2026},
+  type    = {Bachelor's Thesis}
 }
 ```
 
-## Star ⭐
-<div align="center">
+---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=OPPO-PersonalAI/Flash-Searcher&type=Date)](https://github.com/OPPO-PersonalAI/Flash-Searcher)
+## Acknowledgments
 
-</div>
+This project builds upon [Flash-Searcher](https://arxiv.org/abs/2509.25301) as the agent execution framework. We thank the authors for their open-source contribution.
+
+## License
+
+[Apache License 2.0](LICENSE)
