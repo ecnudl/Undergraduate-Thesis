@@ -7,7 +7,7 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 cd "${REPO_ROOT}"
 
 eval "$(conda shell.bash hook)"
-conda activate memevolve
+conda activate evolvelab
 
 GPT_MODEL="${GPT_MODEL:-gpt-5}"
 GPT_BASE="${GPT_BASE:-https://api-vip.codex-for.me/v1}"

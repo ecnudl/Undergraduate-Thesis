@@ -27,7 +27,7 @@ DEFAULT_INFILE = REPO_ROOT / "data" / "gaia" / "validation" / "metadata.jsonl"
 DEFAULT_TASK_SELECTION = "[level1]1-26 [level2]1-43 [level3]1-13"
 DEFAULT_MODEL = "gpt-5"
 DEFAULT_API_BASE = "https://api-vip.codex-for.me/v1"
-DEFAULT_RUNNER_PYTHON = Path("/home/admin123/anaconda3/envs/memevolve/bin/python")
+DEFAULT_RUNNER_PYTHON = Path("/home/admin123/anaconda3/envs/evolvelab/bin/python")
 
 
 @dataclass(frozen=True)

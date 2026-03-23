@@ -143,7 +143,7 @@ class AnalysisAgent(BaseAgent):
             summary_model_id = os.getenv("DEFAULT_MODEL", "qwen3-max")
         super().__init__(model)
         
-        from MemEvolve.utils.trajectory_tools import (
+        # from MemEvolve.utils.trajectory_tools import (
             TrajectoryViewerTool,
             StepViewerTool,
             MemoryDatabaseViewerTool

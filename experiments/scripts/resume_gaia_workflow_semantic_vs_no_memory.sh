@@ -7,7 +7,7 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 cd "${REPO_ROOT}"
 
 eval "$(conda shell.bash hook)"
-conda activate memevolve
+conda activate evolvelab
 
 if [ -f "${REPO_ROOT}/.env" ]; then
     set -a

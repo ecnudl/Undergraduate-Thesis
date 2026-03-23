@@ -27,7 +27,7 @@ GPT_MODEL="${GPT_MODEL:-gpt-5}"
 GPT_BASE="${GPT_BASE:-https://api-vip.codex-for.me/v1}"
 
 eval "$(conda shell.bash hook)"
-conda activate memevolve
+conda activate evolvelab
 
 if [ -f "${REPO_ROOT}/.env" ]; then
     set -a

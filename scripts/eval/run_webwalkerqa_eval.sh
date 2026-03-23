@@ -41,7 +41,7 @@ INFILE="./data/webwalkerqa/webwalkerqa_stratified_150.jsonl"
 
 # ---------- Environment ----------
 eval "$(conda shell.bash hook)"
-conda activate memevolve
+conda activate evolvelab
 
 source .env 2>/dev/null || true
 

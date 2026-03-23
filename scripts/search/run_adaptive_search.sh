@@ -33,7 +33,7 @@ CONFIG_FILE="${CONFIG_FILE:-experiments/configs/architecture_search/adaptive_sea
 
 # ---------- Environment ----------
 eval "$(conda shell.bash hook)"
-conda activate memevolve
+conda activate evolvelab
 
 source .env 2>/dev/null || true
 

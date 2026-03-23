@@ -33,7 +33,7 @@ def _resolve_runner_python() -> str:
     if override:
         return override
 
-    preferred = Path("/home/admin123/anaconda3/envs/memevolve/bin/python")
+    preferred = Path("/home/admin123/anaconda3/envs/evolvelab/bin/python")
     if preferred.exists():
         return str(preferred)
 

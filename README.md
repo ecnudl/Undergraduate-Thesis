@@ -93,8 +93,8 @@ EvolveLab/
 ### 1. Environment Setup
 
 ```bash
-conda create -n memevolve python=3.10 -y
-conda activate memevolve
+conda create -n evolvelab python=3.10 -y
+conda activate evolvelab
 pip install -r requirements.txt
 ```
 
@@ -189,7 +189,7 @@ python scripts/eval/run_flash_searcher_mm_gaia.py --memory_provider modular ...
 If you find this work useful, please cite:
 
 ```bibtex
-@thesis{dl2026memevolve,
+@thesis{dl2026evolvelab,
   title   = {Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents},
   author  = {Lin Du},
   school  = {East China Normal University},
