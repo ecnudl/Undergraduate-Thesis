@@ -1,0 +1,70 @@
+{
+  "_comment": "GAIA ablation study: quantify marginal contribution of each memory module",
+
+  "ablation_name": "ablation_gaia_gpt5",
+
+  "dataset": {
+    "name": "gaia",
+    "split": "validation",
+    "infile": "./data/gaia/validation/metadata.jsonl",
+    "task_indices": "[level1]1-20 [level2]1-10"
+  },
+
+  "runner": {
+    "model": "gpt-5",
+    "judge_model": "gpt-5",
+    "api_base": "https://api-vip.codex-for.me/v1",
+    "force_stream": true,
+    "max_steps": 40,
+    "token_budget": 8192,
+    "concurrency": 1,
+    "seed": 42,
+    "prompts_type": "default",
+    "summary_interval": 8
+  },
+
+  "anchor": {
+    "extraction": "mixed_all",
+    "storage": "hybrid",
+    "retrieval": "hybrid",
+    "management": "json_full"
+  },
+
+  "groups": {
+    "extraction": {
+      "vary": ["insight_tip", "trajectory_only", "mixed_all"],
+      "fixed": {}
+    },
+    "storage": {
+      "vary": ["json", "hybrid", "llm_graph"],
+      "fixed": {}
+    },
+    "retrieval": {
+      "vary": ["semantic", "keyword", "hybrid"],
+      "fixed": {}
+    },
+    "management": {
+      "vary": ["none", "json_basic", "json_full"],
+      "fixed": {}
+    },
+    "retrieval_graph": {
+      "vary": ["graph", "hybrid_graph"],
+      "fixed": {
+        "storage": "llm_graph",
+        "management": "graph_full"
+      },
+      "csv_target": "retrieval"
+    },
+    "management_graph": {
+      "vary": ["none", "graph_full"],
+      "fixed": {
+        "storage": "llm_graph",
+        "retrieval": "hybrid_graph"
+      },
+      "csv_target": "management"
+    }
+  },
+
+  "run_no_memory_baseline": true,
+  "output_root": "./experiments/results/ablation"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "longmemeval_oracle10_no_memory_gpt5",
+  "provider": "none",
+  "dataset": "longmemeval",
+  "split": "oracle",
+  "agent": "long_context_qa",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "seed": 42,
+  "sample_num": 10,
+  "max_steps": 1,
+  "token_budget": 1024,
+  "concurrency": 1,
+  "summary_interval": 8,
+  "prompts_type": "default",
+  "notes": [
+    "Pure long-context baseline for the LongMemEval oracle split.",
+    "Useful for a quick sanity check before running the full S split."
+  ],
+  "extraction_config": {
+    "enabled_prompts": [],
+    "prompt_dir": ".",
+    "top_k": 0
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none"
+}

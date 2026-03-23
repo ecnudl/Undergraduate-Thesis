@@ -1,0 +1,37 @@
+{
+  "name": "gaia_l1_l2_half_no_memory_gpt5",
+  "provider": "none",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "judge_api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "agent": "mm_search_agent",
+  "dataset": "gaia",
+  "split": "validation",
+  "seed": 42,
+  "task_indices": "[level1]1-26 [level2]1-43",
+  "max_steps": 40,
+  "token_budget": 8192,
+  "concurrency": 1,
+  "shared_memory_provider": false,
+  "prompts_type": "default",
+  "enable_memory_evolution": false,
+  "extraction_config": {
+    "enabled_prompts": [],
+    "prompt_dir": ".",
+    "top_k": 0
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none",
+  "notes": [
+    "No-memory baseline: pure agent context without memory provider."
+  ]
+}

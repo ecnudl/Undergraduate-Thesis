@@ -1,0 +1,74 @@
+{
+  "_comment": "Adaptive architecture search: starts with 10 proxy tasks, expands to 20 if configs are tied, uses improved memory gating",
+  "search_name": "adaptive_search_v2",
+
+  "dataset": {
+    "name": "gaia",
+    "split": "validation",
+    "infile": "./data/gaia/validation/metadata.jsonl",
+    "proxy_indices_stage1": "[level1]1-10",
+    "proxy_indices_stage2": "[level1]1-20",
+    "holdout_indices": "[level1]21-53 [level2]1-10",
+    "holdout_datasets": ["gaia"]
+  },
+
+  "runner": {
+    "model": "gpt-5",
+    "judge_model": "gpt-5",
+    "api_base": "https://api-vip.codex-for.me/v1",
+    "force_stream": true,
+    "max_steps": 40,
+    "token_budget": 8192,
+    "concurrency": 1,
+    "seed": 42,
+    "prompts_type": "default",
+    "summary_interval": 8,
+    "cuda_visible_devices": "4"
+  },
+
+  "anchor": {
+    "extraction": "mixed_all",
+    "storage": "hybrid",
+    "retrieval": "hybrid",
+    "management": "json_full"
+  },
+
+  "phase_a": {
+    "top_k": {
+      "extraction": 2,
+      "storage": 2,
+      "retrieval": 3,
+      "management": 2
+    },
+    "run_no_memory_baseline": true,
+    "adaptive_expansion": true,
+    "min_spread_threshold": 0.05,
+    "tie_threshold": 0.03
+  },
+
+  "phase_b": {
+    "top_elites": 5,
+    "max_combinations": 30,
+    "min_top_spread": 0.03,
+    "adaptive_expansion": true,
+    "tie_threshold": 0.03
+  },
+
+  "phase_c": {
+    "skip": true
+  },
+
+  "phase_d": {
+    "top_n": 3,
+    "datasets": ["gaia"]
+  },
+
+  "scoring": {
+    "task_score_weight": 0.80,
+    "token_cost_weight": 0.10,
+    "latency_weight": 0.05,
+    "memory_size_weight": 0.05
+  },
+
+  "output_root": "./experiments/results/architecture_search"
+}

@@ -1,0 +1,32 @@
+{
+  "ablation_name": "ablation_gaia_gpt5",
+  "group": "management",
+  "varied_module": "management",
+  "varied_value": "json_full",
+  "config_id": "ccaabc4e9e",
+  "short_name": "mixed_all__hybrid__hybrid__json_full",
+  "arch_config": {
+    "extraction": "mixed_all",
+    "storage": "hybrid",
+    "retrieval": "hybrid",
+    "management": "json_full"
+  },
+  "dataset": {
+    "name": "gaia",
+    "split": "validation",
+    "infile": "./data/gaia/validation/metadata.jsonl",
+    "task_indices": "[level1]1-20 [level2]1-10"
+  },
+  "runner": {
+    "model": "gpt-5",
+    "judge_model": "gpt-5",
+    "api_base": "https://api-vip.codex-for.me/v1",
+    "force_stream": true,
+    "max_steps": 40,
+    "token_budget": 8192,
+    "concurrency": 1,
+    "seed": 42,
+    "prompts_type": "default",
+    "summary_interval": 8
+  }
+}

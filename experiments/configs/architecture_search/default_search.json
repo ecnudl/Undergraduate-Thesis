@@ -1,0 +1,70 @@
+{
+  "_comment": "Default configuration for hierarchical evolutionary memory architecture search",
+
+  "search_name": "arch_search_v1",
+
+  "dataset": {
+    "name": "gaia",
+    "split": "validation",
+    "infile": "./data/gaia/validation/metadata.jsonl",
+    "proxy_indices": "[level1]1-10",
+    "holdout_indices": "[level1]11-53",
+    "holdout_datasets": ["gaia"]
+  },
+
+  "runner": {
+    "model": "gpt-5",
+    "judge_model": "gpt-5",
+    "max_steps": 40,
+    "token_budget": 8192,
+    "concurrency": 1,
+    "seed": 42,
+    "prompts_type": "default",
+    "summary_interval": 8
+  },
+
+  "anchor": {
+    "extraction": "mixed_all",
+    "storage": "hybrid",
+    "retrieval": "hybrid",
+    "management": "json_full"
+  },
+
+  "phase_a": {
+    "top_k": {
+      "extraction": 2,
+      "storage": 3,
+      "retrieval": 3,
+      "management": 2
+    }
+  },
+
+  "phase_b": {
+    "top_elites": 6
+  },
+
+  "phase_c": {
+    "population_size": 8,
+    "elite_count": 4,
+    "generations": 3,
+    "mutation_rate": 0.5,
+    "crossover_rate": 0.3,
+    "refine_rate": 0.2,
+    "enable_op_refinement": false,
+    "op_refinement_whitelist": []
+  },
+
+  "phase_d": {
+    "top_n": 3,
+    "datasets": ["gaia"]
+  },
+
+  "scoring": {
+    "task_score_weight": 0.80,
+    "token_cost_weight": 0.10,
+    "latency_weight": 0.05,
+    "memory_size_weight": 0.05
+  },
+
+  "output_root": "./experiments/results/architecture_search"
+}

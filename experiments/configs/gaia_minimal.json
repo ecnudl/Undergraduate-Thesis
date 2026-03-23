@@ -1,0 +1,31 @@
+{
+  "name": "gaia_minimal_json_semantic",
+  "provider": "modular",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "agent": "mm_search_agent",
+  "dataset": "gaia",
+  "split": "validation",
+  "seed": 42,
+  "sample_num": 1,
+  "max_steps": 4,
+  "token_budget": 4096,
+  "concurrency": 1,
+  "shared_memory_provider": true,
+  "prompts_type": "default",
+  "enable_memory_evolution": true,
+  "extraction_config": {
+    "enabled_prompts": ["tip"],
+    "prompt_dir": ".",
+    "top_k": 3
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none"
+}

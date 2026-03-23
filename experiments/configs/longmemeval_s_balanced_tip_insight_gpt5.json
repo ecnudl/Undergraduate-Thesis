@@ -1,0 +1,41 @@
+{
+  "name": "longmemeval_s_balanced_tip_insight_gpt5",
+  "provider": "modular",
+  "dataset": "longmemeval",
+  "split": "s_cleaned",
+  "selection_file": "./experiments/configs/longmemeval_s_balanced_subset.json",
+  "agent": "long_context_qa",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "embedding_device": "cpu",
+  "seed": 42,
+  "max_steps": 1,
+  "token_budget": 1024,
+  "concurrency": 1,
+  "summary_interval": 8,
+  "prompts_type": "default",
+  "enable_memory_evolution": true,
+  "shared_memory_provider": false,
+  "notes": [
+    "Balanced LongMemEval_S subset using the modular stack with JSON storage and semantic retrieval.",
+    "LongMemEval sessions are mapped into synthetic TIP and INSIGHT units to exercise the storage/retrieval pipeline."
+  ],
+  "extraction_config": {
+    "enabled_prompts": ["tip", "insight"],
+    "prompt_dir": ".",
+    "top_k": 5
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {
+      "min_score": 0.0
+    }
+  },
+  "management_preset": "none"
+}

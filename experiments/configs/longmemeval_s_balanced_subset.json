@@ -1,0 +1,1340 @@
+{
+  "dataset": "longmemeval",
+  "split": "s_cleaned",
+  "seed": 42,
+  "total_selected": 165,
+  "counts": {
+    "multi-session": 44,
+    "temporal-reasoning": 44,
+    "knowledge-update": 26,
+    "single-session-user": 23,
+    "single-session-assistant": 18,
+    "single-session-preference": 10
+  },
+  "selected_indices": [
+    2,
+    3,
+    6,
+    8,
+    10,
+    12,
+    13,
+    15,
+    18,
+    25,
+    28,
+    31,
+    32,
+    36,
+    39,
+    44,
+    45,
+    48,
+    55,
+    59,
+    64,
+    65,
+    69,
+    72,
+    73,
+    78,
+    80,
+    85,
+    87,
+    89,
+    92,
+    97,
+    101,
+    102,
+    103,
+    107,
+    110,
+    118,
+    120,
+    121,
+    122,
+    123,
+    126,
+    127,
+    130,
+    132,
+    134,
+    136,
+    137,
+    138,
+    148,
+    150,
+    153,
+    156,
+    157,
+    161,
+    164,
+    168,
+    173,
+    175,
+    182,
+    183,
+    185,
+    188,
+    191,
+    193,
+    197,
+    199,
+    203,
+    205,
+    208,
+    209,
+    210,
+    211,
+    213,
+    224,
+    232,
+    237,
+    238,
+    239,
+    240,
+    243,
+    245,
+    249,
+    251,
+    252,
+    258,
+    260,
+    263,
+    265,
+    269,
+    270,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    290,
+    291,
+    299,
+    300,
+    306,
+    307,
+    309,
+    312,
+    319,
+    320,
+    323,
+    324,
+    337,
+    340,
+    343,
+    346,
+    348,
+    353,
+    355,
+    356,
+    358,
+    363,
+    364,
+    369,
+    375,
+    378,
+    381,
+    386,
+    387,
+    388,
+    389,
+    399,
+    400,
+    403,
+    404,
+    406,
+    407,
+    409,
+    412,
+    414,
+    415,
+    423,
+    425,
+    432,
+    434,
+    436,
+    441,
+    443,
+    444,
+    446,
+    448,
+    455,
+    457,
+    459,
+    461,
+    463,
+    465,
+    470,
+    473,
+    474,
+    475,
+    476,
+    477,
+    484,
+    486,
+    487,
+    491
+  ],
+  "selected_question_ids": [
+    "118b2229",
+    "51a45a95",
+    "c5e8278d",
+    "6f9b354f",
+    "f8c5f88b",
+    "7527f7e2",
+    "c960da58",
+    "726462e0",
+    "ad7109d1",
+    "21436231",
+    "853b0a1d",
+    "b86304ba",
+    "d52b4f67",
+    "60d45044",
+    "577d4d32",
+    "ccb36322",
+    "001be529",
+    "4fd1909e",
+    "c19f7a0b",
+    "faba32e5",
+    "a82c026e",
+    "0862e8bf_abs",
+    "29f2956b_abs",
+    "6d550036",
+    "gpt4_59c863d7",
+    "aae3761f",
+    "dd2973ad",
+    "36b9f61e",
+    "gpt4_2f8be40d",
+    "gpt4_15e38248",
+    "d23cf73b",
+    "gpt4_2ba83207",
+    "00ca467f",
+    "b3c15d39",
+    "gpt4_31ff4165",
+    "9d25d4e0",
+    "gpt4_194be4b3",
+    "10d9b85a",
+    "2b8f3739",
+    "1a8a66a6",
+    "c2ac3c61",
+    "bf659f65",
+    "81507db6",
+    "88432d0a_abs",
+    "60bf93ed_abs",
+    "gpt4_372c3eed_abs",
+    "06878be2",
+    "0edc2aef",
+    "35a27287",
+    "32260d93",
+    "d24813b1",
+    "95228167",
+    "d6233ab6",
+    "b6025781",
+    "a89d7624",
+    "1c0ddc50",
+    "2311e44b",
+    "85fa3a3f",
+    "d905b33f",
+    "f35224e0",
+    "4adc0475",
+    "4bc144e2",
+    "5025383b",
+    "3fdac837",
+    "720133ac",
+    "8979f9ec",
+    "3fe836c9",
+    "6c49646a",
+    "bb7c3b45",
+    "61f8c8f8",
+    "73d42213",
+    "bc149d6b",
+    "099778bb",
+    "09ba9854",
+    "157a136e",
+    "87f22b4a",
+    "ba358f49_abs",
+    "b46e15ed",
+    "gpt4_fa19884c",
+    "0bc8ad92",
+    "af082822",
+    "9a707b81",
+    "gpt4_e072b769",
+    "gpt4_6dc9b45b",
+    "gpt4_18c2b244",
+    "gpt4_a1b77f9c",
+    "gpt4_4fc4f797",
+    "gpt4_61e13b3c",
+    "gpt4_e061b84f",
+    "gpt4_d6585ce8",
+    "8077ef71",
+    "gpt4_f420262c",
+    "gpt4_68e94287",
+    "gpt4_e414231e",
+    "gpt4_7ca326fa",
+    "gpt4_7bc6cf22",
+    "2ebe6c92",
+    "gpt4_e061b84g",
+    "b46e15ee",
+    "gpt4_d6585ce9",
+    "9a707b82",
+    "eac54add",
+    "gpt4_68e94288",
+    "gpt4_2655b836",
+    "gpt4_76048e76",
+    "08f4fc43",
+    "f0853d11",
+    "gpt4_6ed717ea",
+    "gpt4_93159ced",
+    "gpt4_2d58bcd6",
+    "cc6d1ec1",
+    "gpt4_7de946e7",
+    "a3045048",
+    "gpt4_88806d6e",
+    "gpt4_93f6379c",
+    "gpt4_0a05b494",
+    "gpt4_2f584639",
+    "gpt4_213fd887",
+    "gpt4_c27434e8",
+    "982b5123_abs",
+    "c8090214_abs",
+    "830ce83f",
+    "ce6d2d27",
+    "a1eacc2a",
+    "4d6b87c8",
+    "2698e78f",
+    "b6019101",
+    "45dc21b6",
+    "5a4f22c0",
+    "db467c8c",
+    "7a87bd0c",
+    "ed4ddc30",
+    "8fb83627",
+    "22d2cb42",
+    "0e4e4c46",
+    "7e974930",
+    "5831f84d",
+    "affe2881",
+    "50635ada",
+    "cf22b7bf",
+    "c7dc5443",
+    "42ec0761",
+    "c6853660",
+    "0977f2af",
+    "0ddfec37_abs",
+    "89941a94",
+    "07741c45",
+    "c4f10528",
+    "e9327a54",
+    "0e5e2d1a",
+    "cc539528",
+    "18dcd5a5",
+    "58470ed2",
+    "1d4da289",
+    "8aef76bc",
+    "3249768e",
+    "6222b6eb",
+    "e8a79c70",
+    "d596882b",
+    "e3fc4d6e",
+    "51b23612",
+    "8b9d4367",
+    "41275add",
+    "4388e9dd",
+    "ac031881"
+  ],
+  "items": [
+    {
+      "global_index": 2,
+      "question_id": "118b2229",
+      "question_type": "single-session-user",
+      "question": "How long is my daily commute to work?"
+    },
+    {
+      "global_index": 3,
+      "question_id": "51a45a95",
+      "question_type": "single-session-user",
+      "question": "Where did I redeem a $5 coupon on coffee creamer?"
+    },
+    {
+      "global_index": 6,
+      "question_id": "c5e8278d",
+      "question_type": "single-session-user",
+      "question": "What was my last name before I changed it?"
+    },
+    {
+      "global_index": 8,
+      "question_id": "6f9b354f",
+      "question_type": "single-session-user",
+      "question": "What color did I repaint my bedroom walls?"
+    },
+    {
+      "global_index": 10,
+      "question_id": "f8c5f88b",
+      "question_type": "single-session-user",
+      "question": "Where did I buy my new tennis racket from?"
+    },
+    {
+      "global_index": 12,
+      "question_id": "7527f7e2",
+      "question_type": "single-session-user",
+      "question": "How much did I spend on a designer handbag?"
+    },
+    {
+      "global_index": 13,
+      "question_id": "c960da58",
+      "question_type": "single-session-user",
+      "question": "How many playlists do I have on Spotify?"
+    },
+    {
+      "global_index": 15,
+      "question_id": "726462e0",
+      "question_type": "single-session-user",
+      "question": "What was the discount I got on my first purchase from the new clothing brand?"
+    },
+    {
+      "global_index": 18,
+      "question_id": "ad7109d1",
+      "question_type": "single-session-user",
+      "question": "What speed is my new internet plan?"
+    },
+    {
+      "global_index": 25,
+      "question_id": "21436231",
+      "question_type": "single-session-user",
+      "question": "How many largemouth bass did I catch on my fishing trip to Lake Michigan?"
+    },
+    {
+      "global_index": 28,
+      "question_id": "853b0a1d",
+      "question_type": "single-session-user",
+      "question": "How old was I when my grandma gave me the silver necklace?"
+    },
+    {
+      "global_index": 31,
+      "question_id": "b86304ba",
+      "question_type": "single-session-user",
+      "question": "How much is the painting of a sunset worth in terms of the amount I paid for it?"
+    },
+    {
+      "global_index": 32,
+      "question_id": "d52b4f67",
+      "question_type": "single-session-user",
+      "question": "Where did I attend my cousin's wedding?"
+    },
+    {
+      "global_index": 36,
+      "question_id": "60d45044",
+      "question_type": "single-session-user",
+      "question": "What type of rice is my favorite?"
+    },
+    {
+      "global_index": 39,
+      "question_id": "577d4d32",
+      "question_type": "single-session-user",
+      "question": "What time do I stop checking work emails and messages?"
+    },
+    {
+      "global_index": 44,
+      "question_id": "ccb36322",
+      "question_type": "single-session-user",
+      "question": "What is the name of the music streaming service have I been using lately?"
+    },
+    {
+      "global_index": 45,
+      "question_id": "001be529",
+      "question_type": "single-session-user",
+      "question": "How long did I wait for the decision on my asylum application?"
+    },
+    {
+      "global_index": 48,
+      "question_id": "4fd1909e",
+      "question_type": "single-session-user",
+      "question": "Where did I attend the Imagine Dragons concert?"
+    },
+    {
+      "global_index": 55,
+      "question_id": "c19f7a0b",
+      "question_type": "single-session-user",
+      "question": "What time do I usually get home from work on weeknights?"
+    },
+    {
+      "global_index": 59,
+      "question_id": "faba32e5",
+      "question_type": "single-session-user",
+      "question": "How long did Alex marinate the BBQ ribs in special sauce?"
+    },
+    {
+      "global_index": 64,
+      "question_id": "a82c026e",
+      "question_type": "single-session-user",
+      "question": "What game did I finally beat last weekend?"
+    },
+    {
+      "global_index": 65,
+      "question_id": "0862e8bf_abs",
+      "question_type": "single-session-user",
+      "question": "What is the name of my hamster?"
+    },
+    {
+      "global_index": 69,
+      "question_id": "29f2956b_abs",
+      "question_type": "single-session-user",
+      "question": "How much time do I dedicate to practicing violin every day?"
+    },
+    {
+      "global_index": 72,
+      "question_id": "6d550036",
+      "question_type": "multi-session",
+      "question": "How many projects have I led or am currently leading?"
+    },
+    {
+      "global_index": 73,
+      "question_id": "gpt4_59c863d7",
+      "question_type": "multi-session",
+      "question": "How many model kits have I worked on or bought?"
+    },
+    {
+      "global_index": 78,
+      "question_id": "aae3761f",
+      "question_type": "multi-session",
+      "question": "How many hours in total did I spend driving to my three road trip destinations combined?"
+    },
+    {
+      "global_index": 80,
+      "question_id": "dd2973ad",
+      "question_type": "multi-session",
+      "question": "What time did I go to bed on the day before I had a doctor's appointment?"
+    },
+    {
+      "global_index": 85,
+      "question_id": "36b9f61e",
+      "question_type": "multi-session",
+      "question": "What is the total amount I spent on luxury items in the past few months?"
+    },
+    {
+      "global_index": 87,
+      "question_id": "gpt4_2f8be40d",
+      "question_type": "multi-session",
+      "question": "How many weddings have I attended in this year?"
+    },
+    {
+      "global_index": 89,
+      "question_id": "gpt4_15e38248",
+      "question_type": "multi-session",
+      "question": "How many pieces of furniture did I buy, assemble, sell, or fix in the past few months?"
+    },
+    {
+      "global_index": 92,
+      "question_id": "d23cf73b",
+      "question_type": "multi-session",
+      "question": "How many different cuisines have I learned to cook or tried out in the past few months?"
+    },
+    {
+      "global_index": 97,
+      "question_id": "gpt4_2ba83207",
+      "question_type": "multi-session",
+      "question": "Which grocery store did I spend the most money at in the past month?"
+    },
+    {
+      "global_index": 101,
+      "question_id": "00ca467f",
+      "question_type": "multi-session",
+      "question": "How many doctor's appointments did I go to in March?"
+    },
+    {
+      "global_index": 102,
+      "question_id": "b3c15d39",
+      "question_type": "multi-session",
+      "question": "How many days did it take for me to receive the new remote shutter release after I ordered it?"
+    },
+    {
+      "global_index": 103,
+      "question_id": "gpt4_31ff4165",
+      "question_type": "multi-session",
+      "question": "How many health-related devices do I use in a day?"
+    },
+    {
+      "global_index": 107,
+      "question_id": "9d25d4e0",
+      "question_type": "multi-session",
+      "question": "How many pieces of jewelry did I acquire in the last two months?"
+    },
+    {
+      "global_index": 110,
+      "question_id": "gpt4_194be4b3",
+      "question_type": "multi-session",
+      "question": "How many musical instruments do I currently own?"
+    },
+    {
+      "global_index": 118,
+      "question_id": "10d9b85a",
+      "question_type": "multi-session",
+      "question": "How many days did I spend attending workshops, lectures, and conferences in April?"
+    },
+    {
+      "global_index": 120,
+      "question_id": "2b8f3739",
+      "question_type": "multi-session",
+      "question": "What is the total amount of money I earned from selling my products at the markets?"
+    },
+    {
+      "global_index": 121,
+      "question_id": "1a8a66a6",
+      "question_type": "multi-session",
+      "question": "How many magazine subscriptions do I currently have?"
+    },
+    {
+      "global_index": 122,
+      "question_id": "c2ac3c61",
+      "question_type": "multi-session",
+      "question": "How many online courses have I completed in total?"
+    },
+    {
+      "global_index": 123,
+      "question_id": "bf659f65",
+      "question_type": "multi-session",
+      "question": "How many music albums or EPs have I purchased or downloaded?"
+    },
+    {
+      "global_index": 126,
+      "question_id": "81507db6",
+      "question_type": "multi-session",
+      "question": "How many graduation ceremonies have I attended in the past three months?"
+    },
+    {
+      "global_index": 127,
+      "question_id": "88432d0a_abs",
+      "question_type": "multi-session",
+      "question": "How many times did I bake egg tarts in the past two weeks?"
+    },
+    {
+      "global_index": 130,
+      "question_id": "60bf93ed_abs",
+      "question_type": "multi-session",
+      "question": "How many days did it take for my iPad case to arrive after I bought it?"
+    },
+    {
+      "global_index": 132,
+      "question_id": "gpt4_372c3eed_abs",
+      "question_type": "multi-session",
+      "question": "How many years in total did I spend in formal education from high school to the completion of my Master's degree?"
+    },
+    {
+      "global_index": 134,
+      "question_id": "06878be2",
+      "question_type": "single-session-preference",
+      "question": "Can you suggest some accessories that would complement my current photography setup?"
+    },
+    {
+      "global_index": 136,
+      "question_id": "0edc2aef",
+      "question_type": "single-session-preference",
+      "question": "Can you suggest a hotel for my upcoming trip to Miami?"
+    },
+    {
+      "global_index": 137,
+      "question_id": "35a27287",
+      "question_type": "single-session-preference",
+      "question": "Can you recommend some interesting cultural events happening around me this weekend?"
+    },
+    {
+      "global_index": 138,
+      "question_id": "32260d93",
+      "question_type": "single-session-preference",
+      "question": "Can you recommend a show or movie for me to watch tonight?"
+    },
+    {
+      "global_index": 148,
+      "question_id": "d24813b1",
+      "question_type": "single-session-preference",
+      "question": "I'm thinking of inviting my colleagues over for a small gathering. Any tips on what to bake?"
+    },
+    {
+      "global_index": 150,
+      "question_id": "95228167",
+      "question_type": "single-session-preference",
+      "question": "I'm getting excited about my visit to the music store this weekend. Any tips on what to look for in a new guitar?"
+    },
+    {
+      "global_index": 153,
+      "question_id": "d6233ab6",
+      "question_type": "single-session-preference",
+      "question": "I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?"
+    },
+    {
+      "global_index": 156,
+      "question_id": "b6025781",
+      "question_type": "single-session-preference",
+      "question": "I'm planning my meal prep next week, any suggestions for new recipes?"
+    },
+    {
+      "global_index": 157,
+      "question_id": "a89d7624",
+      "question_type": "single-session-preference",
+      "question": "I'm planning a trip to Denver soon. Any suggestions on what to do there?"
+    },
+    {
+      "global_index": 161,
+      "question_id": "1c0ddc50",
+      "question_type": "single-session-preference",
+      "question": "Can you suggest some activities I can do during my commute to work?"
+    },
+    {
+      "global_index": 164,
+      "question_id": "2311e44b",
+      "question_type": "multi-session",
+      "question": "How many pages do I have left to read in 'The Nightingale'?"
+    },
+    {
+      "global_index": 168,
+      "question_id": "85fa3a3f",
+      "question_type": "multi-session",
+      "question": "What is the total cost of the new food bowl, measuring cup, dental chews, and flea and tick collar I got for Max?"
+    },
+    {
+      "global_index": 173,
+      "question_id": "d905b33f",
+      "question_type": "multi-session",
+      "question": "What percentage discount did I get on the book from my favorite author?"
+    },
+    {
+      "global_index": 175,
+      "question_id": "f35224e0",
+      "question_type": "multi-session",
+      "question": "What is the total number of episodes I've listened to from 'How I Built This' and 'My Favorite Murder'?"
+    },
+    {
+      "global_index": 182,
+      "question_id": "4adc0475",
+      "question_type": "multi-session",
+      "question": "What is the total number of goals and assists I have in the recreational indoor soccer league?"
+    },
+    {
+      "global_index": 183,
+      "question_id": "4bc144e2",
+      "question_type": "multi-session",
+      "question": "How much did I spend on car wash and parking ticket?"
+    },
+    {
+      "global_index": 185,
+      "question_id": "5025383b",
+      "question_type": "multi-session",
+      "question": "What are the two hobbies that led me to join online communities?"
+    },
+    {
+      "global_index": 188,
+      "question_id": "3fdac837",
+      "question_type": "multi-session",
+      "question": "What is the total number of days I spent in Japan and Chicago?"
+    },
+    {
+      "global_index": 191,
+      "question_id": "720133ac",
+      "question_type": "multi-session",
+      "question": "What is the total cost of Lola's vet visit and flea medication?"
+    },
+    {
+      "global_index": 193,
+      "question_id": "8979f9ec",
+      "question_type": "multi-session",
+      "question": "What is the total number of lunch meals I got from the chicken fajitas and lentil soup?"
+    },
+    {
+      "global_index": 197,
+      "question_id": "3fe836c9",
+      "question_type": "multi-session",
+      "question": "How much more was the pre-approval amount than the final sale price of the house?"
+    },
+    {
+      "global_index": 199,
+      "question_id": "6c49646a",
+      "question_type": "multi-session",
+      "question": "What is the total distance I covered in my four road trips?"
+    },
+    {
+      "global_index": 203,
+      "question_id": "bb7c3b45",
+      "question_type": "multi-session",
+      "question": "How much did I save on the Jimmy Choo heels?"
+    },
+    {
+      "global_index": 205,
+      "question_id": "61f8c8f8",
+      "question_type": "multi-session",
+      "question": "How much faster did I finish the 5K run compared to my previous year's time?"
+    },
+    {
+      "global_index": 208,
+      "question_id": "73d42213",
+      "question_type": "multi-session",
+      "question": "What time did I reach the clinic on Monday?"
+    },
+    {
+      "global_index": 209,
+      "question_id": "bc149d6b",
+      "question_type": "multi-session",
+      "question": "What is the total weight of the new feed I purchased in the past two months?"
+    },
+    {
+      "global_index": 210,
+      "question_id": "099778bb",
+      "question_type": "multi-session",
+      "question": "What percentage of leadership positions do women hold in the my company?"
+    },
+    {
+      "global_index": 211,
+      "question_id": "09ba9854",
+      "question_type": "multi-session",
+      "question": "How much will I save by taking the train from the airport to my hotel instead of a taxi?"
+    },
+    {
+      "global_index": 213,
+      "question_id": "157a136e",
+      "question_type": "multi-session",
+      "question": "How many years older is my grandma than me?"
+    },
+    {
+      "global_index": 224,
+      "question_id": "87f22b4a",
+      "question_type": "multi-session",
+      "question": "How much have I made from selling eggs this month?"
+    },
+    {
+      "global_index": 232,
+      "question_id": "ba358f49_abs",
+      "question_type": "multi-session",
+      "question": "How old will Rachel be when I get married?"
+    },
+    {
+      "global_index": 237,
+      "question_id": "b46e15ed",
+      "question_type": "temporal-reasoning",
+      "question": "How many months have passed since I participated in two charity events in a row, on consecutive days?"
+    },
+    {
+      "global_index": 238,
+      "question_id": "gpt4_fa19884c",
+      "question_type": "temporal-reasoning",
+      "question": "How many days passed between the day I started playing along to my favorite songs on my old keyboard and the day I discovered a bluegrass band?"
+    },
+    {
+      "global_index": 239,
+      "question_id": "0bc8ad92",
+      "question_type": "temporal-reasoning",
+      "question": "How many months have passed since I last visited a museum with a friend?"
+    },
+    {
+      "global_index": 240,
+      "question_id": "af082822",
+      "question_type": "temporal-reasoning",
+      "question": "How many weeks ago did I attend the friends and family sale at Nordstrom?"
+    },
+    {
+      "global_index": 243,
+      "question_id": "9a707b81",
+      "question_type": "temporal-reasoning",
+      "question": "How many days ago did I attend a baking class at a local culinary school when I made my friend's birthday cake?"
+    },
+    {
+      "global_index": 245,
+      "question_id": "gpt4_e072b769",
+      "question_type": "temporal-reasoning",
+      "question": "How many weeks ago did I start using the cashback app 'Ibotta'?"
+    },
+    {
+      "global_index": 249,
+      "question_id": "gpt4_6dc9b45b",
+      "question_type": "temporal-reasoning",
+      "question": "How many months ago did I attend the Seattle International Film Festival?"
+    },
+    {
+      "global_index": 251,
+      "question_id": "gpt4_18c2b244",
+      "question_type": "temporal-reasoning",
+      "question": "What is the order of the three events: 'I signed up for the rewards program at ShopRite', 'I used a Buy One Get One Free coupon on Luvs diapers at Walmart', and 'I redeemed $12 cashback for a $10 Amazon gift card from Ibotta'?"
+    },
+    {
+      "global_index": 252,
+      "question_id": "gpt4_a1b77f9c",
+      "question_type": "temporal-reasoning",
+      "question": "How many weeks in total do I spent on reading 'The Nightingale' and listening to 'Sapiens: A Brief History of Humankind' and 'The Power'?"
+    },
+    {
+      "global_index": 258,
+      "question_id": "gpt4_4fc4f797",
+      "question_type": "temporal-reasoning",
+      "question": "How many days passed between the day I received feedback about my car's suspension and the day I tested my new suspension setup?"
+    },
+    {
+      "global_index": 260,
+      "question_id": "gpt4_61e13b3c",
+      "question_type": "temporal-reasoning",
+      "question": "How many weeks passed between the time I sold homemade baked goods at the Farmers' Market for the last time and the time I participated in the Spring Fling Market?"
+    },
+    {
+      "global_index": 263,
+      "question_id": "gpt4_e061b84f",
+      "question_type": "temporal-reasoning",
+      "question": "What is the order of the three sports events I participated in during the past month, from earliest to latest?"
+    },
+    {
+      "global_index": 265,
+      "question_id": "gpt4_d6585ce8",
+      "question_type": "temporal-reasoning",
+      "question": "What is the order of the concerts and musical events I attended in the past two months, starting from the earliest?"
+    },
+    {
+      "global_index": 269,
+      "question_id": "8077ef71",
+      "question_type": "temporal-reasoning",
+      "question": "How many days ago did I attend a networking event?"
+    },
+    {
+      "global_index": 270,
+      "question_id": "gpt4_f420262c",
+      "question_type": "temporal-reasoning",
+      "question": "What is the order of airlines I flew with from earliest to latest before today?"
+    },
+    {
+      "global_index": 283,
+      "question_id": "gpt4_68e94287",
+      "question_type": "temporal-reasoning",
+      "question": "Which event happened first, my participation in the #PlankChallenge or my post about vegan chili recipe?"
+    },
+    {
+      "global_index": 284,
+      "question_id": "gpt4_e414231e",
+      "question_type": "temporal-reasoning",
+      "question": "How many days passed between the day I fixed my mountain bike and the day I decided to upgrade my road bike's pedals?"
+    },
+    {
+      "global_index": 285,
+      "question_id": "gpt4_7ca326fa",
+      "question_type": "temporal-reasoning",
+      "question": "Who graduated first, second and third among Emma, Rachel and Alex?"
+    },
+    {
+      "global_index": 286,
+      "question_id": "gpt4_7bc6cf22",
+      "question_type": "temporal-reasoning",
+      "question": "How many days ago did I read the March 15th issue of The New Yorker?"
+    },
+    {
+      "global_index": 287,
+      "question_id": "2ebe6c92",
+      "question_type": "temporal-reasoning",
+      "question": "Which book did I finish a week ago?"
+    },
+    {
+      "global_index": 288,
+      "question_id": "gpt4_e061b84g",
+      "question_type": "temporal-reasoning",
+      "question": "I mentioned participating in a sports event two weeks ago. What was the event?"
+    },
+    {
+      "global_index": 290,
+      "question_id": "b46e15ee",
+      "question_type": "temporal-reasoning",
+      "question": "What charity event did I participate in a month ago?"
+    },
+    {
+      "global_index": 291,
+      "question_id": "gpt4_d6585ce9",
+      "question_type": "temporal-reasoning",
+      "question": "Who did I go with to the music event last Saturday?"
+    },
+    {
+      "global_index": 299,
+      "question_id": "9a707b82",
+      "question_type": "temporal-reasoning",
+      "question": "I mentioned cooking something for my friend a couple of days ago. What was it?"
+    },
+    {
+      "global_index": 300,
+      "question_id": "eac54add",
+      "question_type": "temporal-reasoning",
+      "question": "What was the significant buisiness milestone I mentioned four weeks ago?"
+    },
+    {
+      "global_index": 306,
+      "question_id": "gpt4_68e94288",
+      "question_type": "temporal-reasoning",
+      "question": "What was the social media activity I participated 5 days ago?"
+    },
+    {
+      "global_index": 307,
+      "question_id": "gpt4_2655b836",
+      "question_type": "temporal-reasoning",
+      "question": "What was the first issue I had with my new car after its first service?"
+    },
+    {
+      "global_index": 309,
+      "question_id": "gpt4_76048e76",
+      "question_type": "temporal-reasoning",
+      "question": "Which vehicle did I take care of first in February, the bike or the car?"
+    },
+    {
+      "global_index": 312,
+      "question_id": "08f4fc43",
+      "question_type": "temporal-reasoning",
+      "question": "How many days had passed between the Sunday mass at St. Mary's Church and the Ash Wednesday service at the cathedral?"
+    },
+    {
+      "global_index": 319,
+      "question_id": "f0853d11",
+      "question_type": "temporal-reasoning",
+      "question": "How many days had passed between the 'Walk for Hunger' event and the 'Coastal Cleanup' event?"
+    },
+    {
+      "global_index": 320,
+      "question_id": "gpt4_6ed717ea",
+      "question_type": "temporal-reasoning",
+      "question": "Which item did I purchase first, the dog bed for Max or the training pads for Luna?"
+    },
+    {
+      "global_index": 323,
+      "question_id": "gpt4_93159ced",
+      "question_type": "temporal-reasoning",
+      "question": "How long have I been working before I started my current job at NovaTech?"
+    },
+    {
+      "global_index": 324,
+      "question_id": "gpt4_2d58bcd6",
+      "question_type": "temporal-reasoning",
+      "question": "Which book did I finish reading first, 'The Hate U Give' or 'The Nightingale'?"
+    },
+    {
+      "global_index": 337,
+      "question_id": "cc6d1ec1",
+      "question_type": "temporal-reasoning",
+      "question": "How long had I been bird watching when I attended the bird watching workshop?"
+    },
+    {
+      "global_index": 340,
+      "question_id": "gpt4_7de946e7",
+      "question_type": "temporal-reasoning",
+      "question": "Which health issue did I deal with first, the persistent cough or the skin tag removal?"
+    },
+    {
+      "global_index": 343,
+      "question_id": "a3045048",
+      "question_type": "temporal-reasoning",
+      "question": "How many days before my best friend's birthday party did I order her gift?"
+    },
+    {
+      "global_index": 346,
+      "question_id": "gpt4_88806d6e",
+      "question_type": "temporal-reasoning",
+      "question": "Who did I meet first, Mark and Sarah or Tom?"
+    },
+    {
+      "global_index": 348,
+      "question_id": "gpt4_93f6379c",
+      "question_type": "temporal-reasoning",
+      "question": "Which group did I join first, 'Page Turners' or 'Marketing Professionals'?"
+    },
+    {
+      "global_index": 353,
+      "question_id": "gpt4_0a05b494",
+      "question_type": "temporal-reasoning",
+      "question": "Who did I meet first, the woman selling jam at the farmer's market or the tourist from Australia?"
+    },
+    {
+      "global_index": 355,
+      "question_id": "gpt4_2f584639",
+      "question_type": "temporal-reasoning",
+      "question": "Which gift did I buy first, the necklace for my sister or the photo album for my mom?"
+    },
+    {
+      "global_index": 356,
+      "question_id": "gpt4_213fd887",
+      "question_type": "temporal-reasoning",
+      "question": "Which event did I participate in first, the volleyball league or the charity 5K run to raise money for a local children's hospital?"
+    },
+    {
+      "global_index": 358,
+      "question_id": "gpt4_c27434e8",
+      "question_type": "temporal-reasoning",
+      "question": "Which project did I start first, the Ferrari model or the Japanese Zero fighter plane model?"
+    },
+    {
+      "global_index": 363,
+      "question_id": "982b5123_abs",
+      "question_type": "temporal-reasoning",
+      "question": "When did I book the Airbnb in Sacramento?"
+    },
+    {
+      "global_index": 364,
+      "question_id": "c8090214_abs",
+      "question_type": "temporal-reasoning",
+      "question": "How many days before I bought my iPad did I attend the Holiday Market?"
+    },
+    {
+      "global_index": 369,
+      "question_id": "830ce83f",
+      "question_type": "knowledge-update",
+      "question": "Where did Rachel move to after her recent relocation?"
+    },
+    {
+      "global_index": 375,
+      "question_id": "ce6d2d27",
+      "question_type": "knowledge-update",
+      "question": "What day of the week do I take a cocktail-making class?"
+    },
+    {
+      "global_index": 378,
+      "question_id": "a1eacc2a",
+      "question_type": "knowledge-update",
+      "question": "How many short stories have I written since I started writing regularly?"
+    },
+    {
+      "global_index": 381,
+      "question_id": "4d6b87c8",
+      "question_type": "knowledge-update",
+      "question": "How many titles are currently on my to-watch list?"
+    },
+    {
+      "global_index": 386,
+      "question_id": "2698e78f",
+      "question_type": "knowledge-update",
+      "question": "How often do I see my therapist, Dr. Smith?"
+    },
+    {
+      "global_index": 387,
+      "question_id": "b6019101",
+      "question_type": "knowledge-update",
+      "question": "How many MCU films did I watch in the last 3 months?"
+    },
+    {
+      "global_index": 388,
+      "question_id": "45dc21b6",
+      "question_type": "knowledge-update",
+      "question": "How many of Emma's recipes have I tried out?"
+    },
+    {
+      "global_index": 389,
+      "question_id": "5a4f22c0",
+      "question_type": "knowledge-update",
+      "question": "What company is Rachel, an old colleague from my previous company, currently working at?"
+    },
+    {
+      "global_index": 399,
+      "question_id": "db467c8c",
+      "question_type": "knowledge-update",
+      "question": "How long have my parents been staying with me in the US?"
+    },
+    {
+      "global_index": 400,
+      "question_id": "7a87bd0c",
+      "question_type": "knowledge-update",
+      "question": "How long have I been sticking to my daily tidying routine?"
+    },
+    {
+      "global_index": 403,
+      "question_id": "ed4ddc30",
+      "question_type": "knowledge-update",
+      "question": "How many dozen eggs do we currently have stocked up in our refrigerator?"
+    },
+    {
+      "global_index": 404,
+      "question_id": "8fb83627",
+      "question_type": "knowledge-update",
+      "question": "How many issues of National Geographic have I finished reading?"
+    },
+    {
+      "global_index": 406,
+      "question_id": "22d2cb42",
+      "question_type": "knowledge-update",
+      "question": "Where did I get my guitar serviced?"
+    },
+    {
+      "global_index": 407,
+      "question_id": "0e4e4c46",
+      "question_type": "knowledge-update",
+      "question": "What is my current highest score in Ticket to Ride?"
+    },
+    {
+      "global_index": 409,
+      "question_id": "7e974930",
+      "question_type": "knowledge-update",
+      "question": "How much did I earn at the Downtown Farmers Market on my most recent visit?"
+    },
+    {
+      "global_index": 412,
+      "question_id": "5831f84d",
+      "question_type": "knowledge-update",
+      "question": "How many Crash Course videos have I watched in the past few weeks?"
+    },
+    {
+      "global_index": 414,
+      "question_id": "affe2881",
+      "question_type": "knowledge-update",
+      "question": "How many different species of birds have I seen in my local park?"
+    },
+    {
+      "global_index": 415,
+      "question_id": "50635ada",
+      "question_type": "knowledge-update",
+      "question": "What was my previous frequent flyer status on United Airlines before I got the current status?"
+    },
+    {
+      "global_index": 423,
+      "question_id": "cf22b7bf",
+      "question_type": "knowledge-update",
+      "question": "How much weight have I lost since I started going to the gym consistently?"
+    },
+    {
+      "global_index": 425,
+      "question_id": "c7dc5443",
+      "question_type": "knowledge-update",
+      "question": "What is my current record in the recreational volleyball league?"
+    },
+    {
+      "global_index": 432,
+      "question_id": "42ec0761",
+      "question_type": "knowledge-update",
+      "question": "Do I have a spare screwdriver for opening up my laptop?"
+    },
+    {
+      "global_index": 434,
+      "question_id": "c6853660",
+      "question_type": "knowledge-update",
+      "question": "Did I mostly recently increase or decrease the limit on the number of cups of coffee in the morning?"
+    },
+    {
+      "global_index": 436,
+      "question_id": "0977f2af",
+      "question_type": "knowledge-update",
+      "question": "What new kitchen gadget did I invest in before getting the Air Fryer?"
+    },
+    {
+      "global_index": 441,
+      "question_id": "0ddfec37_abs",
+      "question_type": "knowledge-update",
+      "question": "How many autographed football have I added to my collection in the first three months of collection?"
+    },
+    {
+      "global_index": 443,
+      "question_id": "89941a94",
+      "question_type": "knowledge-update",
+      "question": "Before I purchased the gravel bike, do I have other bikes in addition to my mountain bike and my commuter bike?"
+    },
+    {
+      "global_index": 444,
+      "question_id": "07741c45",
+      "question_type": "knowledge-update",
+      "question": "Where do I currently keep my old sneakers?"
+    },
+    {
+      "global_index": 446,
+      "question_id": "c4f10528",
+      "question_type": "single-session-assistant",
+      "question": "I'm planning to visit Bandung again and I was wondering if you could remind me of the name of that restaurant in Cihampelas Walk that serves a great Nasi Goreng?"
+    },
+    {
+      "global_index": 448,
+      "question_id": "e9327a54",
+      "question_type": "single-session-assistant",
+      "question": "I'm planning to revisit Orlando. I was wondering if you could remind me of that unique dessert shop with the giant milkshakes we talked about last time?"
+    },
+    {
+      "global_index": 455,
+      "question_id": "0e5e2d1a",
+      "question_type": "single-session-assistant",
+      "question": "I wanted to follow up on our previous conversation about binaural beats for anxiety and depression. Can you remind me how many subjects were in the study published in the journal Music and Medicine that found significant reductions in symptoms of depression, anxiety, and stress?"
+    },
+    {
+      "global_index": 457,
+      "question_id": "cc539528",
+      "question_type": "single-session-assistant",
+      "question": "I wanted to follow up on our previous conversation about front-end and back-end development. Can you remind me of the specific back-end programming languages you recommended I learn?"
+    },
+    {
+      "global_index": 459,
+      "question_id": "18dcd5a5",
+      "question_type": "single-session-assistant",
+      "question": "I'm going back to our previous chat about the Lost Temple of the Djinn one-shot. Can you remind me how many mummies the party will face in the temple?"
+    },
+    {
+      "global_index": 461,
+      "question_id": "58470ed2",
+      "question_type": "single-session-assistant",
+      "question": "I was going through our previous conversation about The Library of Babel, and I wanted to confirm - what did Borges say about the center and circumference of the Library?"
+    },
+    {
+      "global_index": 463,
+      "question_id": "1d4da289",
+      "question_type": "single-session-assistant",
+      "question": "I was thinking about our previous conversation about data privacy and security. You mentioned that companies use two-factor authentication to enhance security. Can you remind me what kind of two-factor authentication methods you were referring to?"
+    },
+    {
+      "global_index": 465,
+      "question_id": "8aef76bc",
+      "question_type": "single-session-assistant",
+      "question": "I'm going back to our previous conversation about DIY home decor projects using recycled materials. Can you remind me what sealant you recommended for the newspaper flower vase?"
+    },
+    {
+      "global_index": 470,
+      "question_id": "3249768e",
+      "question_type": "single-session-assistant",
+      "question": "I'm looking back at our previous conversation about building a cocktail bar. You recommended five bottles to make the widest variety of gin-based cocktails. Can you remind me what the fifth bottle was?"
+    },
+    {
+      "global_index": 473,
+      "question_id": "6222b6eb",
+      "question_type": "single-session-assistant",
+      "question": "I was going through our previous conversation about atmospheric correction methods, and I wanted to confirm - you mentioned that 6S, MAJA, and Sen2Cor are all algorithms for atmospheric correction of remote sensing images. Can you remind me which one is implemented in the SIAC_GEE tool?"
+    },
+    {
+      "global_index": 474,
+      "question_id": "e8a79c70",
+      "question_type": "single-session-assistant",
+      "question": "I was going through our previous conversation about making a classic French omelette, and I wanted to confirm - how many eggs did you say we need for the recipe?"
+    },
+    {
+      "global_index": 475,
+      "question_id": "d596882b",
+      "question_type": "single-session-assistant",
+      "question": "I'm planning another trip to New York City and I was wondering if you could remind me of that vegan eatery you recommended last time, the one with multiple locations throughout the city?"
+    },
+    {
+      "global_index": 476,
+      "question_id": "e3fc4d6e",
+      "question_type": "single-session-assistant",
+      "question": "I wanted to follow up on our previous conversation about the fusion breakthrough at Lawrence Livermore National Laboratory. Can you remind me who is the President's Chief Advisor for Science and Technology mentioned in the article?"
+    },
+    {
+      "global_index": 477,
+      "question_id": "51b23612",
+      "question_type": "single-session-assistant",
+      "question": "I was going through our previous conversation about political propaganda and humor, and I was wondering if you could remind me of that Soviet cartoon you mentioned that mocked Western culture?"
+    },
+    {
+      "global_index": 484,
+      "question_id": "8b9d4367",
+      "question_type": "single-session-assistant",
+      "question": "I wanted to follow up on our previous conversation about private sector businesses in Chaudhary. Can you remind me of the company that employs over 40,000 people in the rug-manufacturing industry?"
+    },
+    {
+      "global_index": 486,
+      "question_id": "41275add",
+      "question_type": "single-session-assistant",
+      "question": "I wanted to follow up on our previous conversation about YouTube videos for workplace posture. Can you remind me of the Mayo Clinic video you recommended?"
+    },
+    {
+      "global_index": 487,
+      "question_id": "4388e9dd",
+      "question_type": "single-session-assistant",
+      "question": "I was going through our previous chat and I was wondering, what was Andy wearing in the script you wrote for the comedy movie scene?"
+    },
+    {
+      "global_index": 491,
+      "question_id": "ac031881",
+      "question_type": "single-session-assistant",
+      "question": "I'm trying to recall what the designation on my jumpsuit was that helped me find the file number in the records room?"
+    }
+  ]
+}

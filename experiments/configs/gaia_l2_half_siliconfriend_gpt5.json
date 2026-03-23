@@ -1,0 +1,41 @@
+{
+  "name": "gaia_l2_half_siliconfriend_gpt5",
+  "provider": "siliconfriend",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "judge_api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "cuda_visible_devices": "3",
+  "embedding_device": "cuda:0",
+  "agent": "mm_search_agent",
+  "dataset": "gaia",
+  "split": "validation",
+  "seed": 42,
+  "task_indices": "[level2]1-43",
+  "max_steps": 40,
+  "token_budget": 8192,
+  "concurrency": 1,
+  "shared_memory_provider": true,
+  "prompts_type": "default",
+  "enable_memory_evolution": true,
+  "provider_config": {
+    "user_name": "gaia_eval",
+    "top_k": 3,
+    "language": "en",
+    "embedding_model": "minilm-l6",
+    "response_mode": "trajectory_summary"
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none",
+  "notes": [
+    "SiliconFriend baseline adapted as a retrieval-only memory backend for GAIA."
+  ]
+}

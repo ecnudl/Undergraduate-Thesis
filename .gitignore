@@ -1,0 +1,27 @@
+# Runtime data
+storage/
+data/
+downloads/
+experiments/results/
+
+# Logs
+nohup*.out
+*.log
+
+# Secrets
+.env
+
+# Temp files
+*.pip
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# IDE & tools
+.claude/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+{
+  "name": "gaia_l2_half_gpt5_json_semantic",
+  "provider": "modular",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "judge_api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "embedding_device": "cpu",
+  "agent": "mm_search_agent",
+  "dataset": "gaia",
+  "split": "validation",
+  "seed": 42,
+  "task_indices": "[level2]1-43",
+  "max_steps": 40,
+  "token_budget": 8192,
+  "concurrency": 1,
+  "shared_memory_provider": true,
+  "prompts_type": "default",
+  "enable_memory_evolution": true,
+  "extraction_config": {
+    "enabled_prompts": ["tip", "insight"],
+    "prompt_dir": ".",
+    "top_k": 5
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none"
+}

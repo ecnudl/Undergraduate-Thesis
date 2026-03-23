@@ -1,0 +1,45 @@
+{
+  "name": "longmemeval_s_balanced_graph_gpt5",
+  "provider": "modular",
+  "dataset": "longmemeval",
+  "split": "s_cleaned",
+  "selection_file": "./experiments/configs/longmemeval_s_balanced_subset.json",
+  "agent": "long_context_qa",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "embedding_device": "cpu",
+  "seed": 42,
+  "max_steps": 1,
+  "token_budget": 1024,
+  "concurrency": 1,
+  "summary_interval": 8,
+  "prompts_type": "default",
+  "enable_memory_evolution": true,
+  "shared_memory_provider": false,
+  "notes": [
+    "Balanced LongMemEval_S subset using the modular graph stack.",
+    "The same synthetic TIP/INSIGHT session units are stored in GraphStore and retrieved via HybridGraphRetriever."
+  ],
+  "extraction_config": {
+    "enabled_prompts": ["tip", "insight"],
+    "prompt_dir": ".",
+    "top_k": 5
+  },
+  "storage_backend": {
+    "type": "graph",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "hybrid_graph",
+    "config": {
+      "entity_top_k": 5,
+      "graph_max_hops": 2,
+      "semantic_weight": 1.0,
+      "bm25_weight": 1.0,
+      "graph_weight": 1.2
+    }
+  },
+  "management_preset": "graph_full"
+}

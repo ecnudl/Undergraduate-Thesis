@@ -1,0 +1,35 @@
+{
+  "name": "longmemeval_s_full_no_memory_gpt5",
+  "provider": "none",
+  "dataset": "longmemeval",
+  "split": "s_cleaned",
+  "agent": "long_context_qa",
+  "model": "gpt-5",
+  "judge_model": "gpt-5",
+  "api_base": "https://api-vip.codex-for.me/v1",
+  "openai_base_url": "https://api-vip.codex-for.me/v1",
+  "seed": 42,
+  "max_steps": 1,
+  "token_budget": 1024,
+  "concurrency": 1,
+  "summary_interval": 8,
+  "prompts_type": "default",
+  "notes": [
+    "Pure long-context baseline for the full LongMemEval_S cleaned split.",
+    "No memory provider; the full haystack context is sent directly to the model."
+  ],
+  "extraction_config": {
+    "enabled_prompts": [],
+    "prompt_dir": ".",
+    "top_k": 0
+  },
+  "storage_backend": {
+    "type": "json",
+    "config": {}
+  },
+  "retrieval_strategy": {
+    "type": "semantic",
+    "config": {}
+  },
+  "management_preset": "none"
+}
