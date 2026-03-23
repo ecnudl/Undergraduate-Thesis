@@ -189,9 +189,9 @@ python scripts/eval/run_flash_searcher_mm_gaia.py --memory_provider modular ...
 If you find this work useful, please cite:
 
 ```bibtex
-@thesis{gzl2026memevolve,
+@thesis{dl2026memevolve,
   title   = {Exploring the Evolution of Long-Term Memory Systems for Large Language Model Agents},
-  author  = {Zhilong Guo},
+  author  = {Lin Du},
   school  = {East China Normal University},
   year    = {2026},
   type    = {Bachelor's Thesis}
